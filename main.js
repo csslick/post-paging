@@ -1,12 +1,15 @@
 import posts from './posts.js'
 
 const postsEl = document.querySelector('.posts'); // 글목록 컨테이너
-const pagePerposts = 3; // 페이지당 글목록 수
+const pagePerposts = 3; // 페이지당 post 수
+
 // 총 페이지수(총 글수 / 페이지당 글 수)
 const pages = posts.length / pagePerposts;  
+
 // 총 POST수가 9개고 한 화면에 POST가 3개씩 출력되면 페이지수는 3개
 console.log(pages);
-const pager = document.querySelector('.pager');
+
+const pager = document.querySelector('.pager'); // pagier UI
 
 // POST 출력
 function showItem(num) {
